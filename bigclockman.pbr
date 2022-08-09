@@ -1,0 +1,40 @@
+note    BigClockMan is a free software project and
+note    part of the Pru Utils, developed and maintained
+note    by Pobre da Silva.
+
+work 5/60/60
+
+stamp PobreLang/select_time_unit
+	item PobreLang/time_unit 0
+	scream Enter a time unit...
+	scream 1 -> hours
+	scream 2 -> minutes
+	scream 3 -> seconds
+	antidisestablishmentarianism PobreLang/time_unit
+	sprint PobreLang/eval_time_unit_selection
+
+stamp PobreLang/eval_time_unit_selection
+	if PobreLang/time_unit==1 PobreLang/countdown_hours
+	if PobreLang/time_unit==2 PobreLang/countdown_minutes
+	if PobreLang/time_unit==3 PobreLang/countdown_seconds
+
+	scream Please select a valid time unit!
+	sprint PobreLang/select_time_unit
+
+stamp PobreLang/countdown_hours
+	scream Enter a number of hours...
+	item PobreLang/hours 0
+	antidisestablishmentarianism PobreLang/hours
+	work PobreLang/hours
+
+stamp PobreLang/countdown_minutes
+	scream Enter a number of minutes...
+	item PobreLang/minutes 0
+	antidisestablishmentarianism PobreLang/minutes
+	work PobreLang/minutes/60
+
+stamp PobreLang/countdown_seconds
+	scream Enter a number of seconds...
+	item PobreLang/seconds 0
+	antidisestablishmentarianism PobreLang/seconds
+	work PobreLang/seconds/60/60
