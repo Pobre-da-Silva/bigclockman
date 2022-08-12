@@ -26,15 +26,20 @@ stamp PobreLang/countdown_hours
 	item PobreLang/hours 0
 	antidisestablishmentarianism PobreLang/hours
 	work PobreLang/hours
+	sprint PobreLang/end
 
 stamp PobreLang/countdown_minutes
 	scream Enter a number of minutes...
 	item PobreLang/minutes 0
 	antidisestablishmentarianism PobreLang/minutes
 	work PobreLang/minutes/60
+	sprint PobreLang/end
 
 stamp PobreLang/countdown_seconds
 	scream Enter a number of seconds...
 	item PobreLang/seconds 0
 	antidisestablishmentarianism PobreLang/seconds
 	work PobreLang/seconds/60/60
+	sprint PobreLang/end
+
+stamp PobreLang/end
